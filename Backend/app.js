@@ -8,8 +8,6 @@ connectDB();
 
 const app = express();
 
-const cors = require('cors');
-
 app.use(cors({
   origin: 'https://your-frontend-link.onrender.com', // Replace with your ACTUAL frontend link
   credentials: true
