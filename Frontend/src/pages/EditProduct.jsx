@@ -36,7 +36,7 @@ const EditProduct = () => {
     const token = localStorage.getItem('token');
     
     try {
-      await axios.put(`http://lbackendassignment-yvte.onrender.com/api/products/${id}`, formData, {
+      await axios.put(`http://backendassignment-yvte.onrender.com/api/products/${id}`, formData, {
         headers: { Authorization: `Bearer ${token}` }
       });
       alert("✅ Product updated successfully!");
