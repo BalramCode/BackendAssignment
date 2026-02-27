@@ -9,7 +9,7 @@ const Home = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await axios.get('http://localhost:3000/api/products');
+        const res = await axios.get('http://backendassignment-yvte.onrender.com/api/products');
         setProducts(res.data.products);
         setLoading(false);
       } catch (err) {

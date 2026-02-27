@@ -7,7 +7,7 @@ const AdminDashboard = () => {
     const token = localStorage.getItem('token');
 
     const fetchProducts = async () => {
-        const res = await axios.get('http://localhost:3000/api/products');
+        const res = await axios.get('http://backendassignment-yvte.onrender.com/api/products');
         setProducts(res.data.products);
     };
 
@@ -15,7 +15,7 @@ const AdminDashboard = () => {
 
     const handleDelete = async (id) => {
         if (window.confirm("Delete this product?")) {
-            await axios.delete(`http://localhost:3000/api/products/${id}`, {
+            await axios.delete(`backendassignment-yvte.onrender.com/api/products/${id}`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             fetchProducts();
