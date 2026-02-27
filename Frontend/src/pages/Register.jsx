@@ -9,7 +9,7 @@ const Register = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://backendassignment-yvte.onrender.com/api/auth/register', formData);
+      const res = await axios.post('https://backendassignment-yvte.onrender.com/api/auth/register', formData);
       localStorage.setItem('token', res.data.token);
       localStorage.setItem('role', res.data.user.role);
       alert("Registration Successful!");

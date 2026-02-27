@@ -7,7 +7,7 @@ const AdminDashboard = () => {
     const token = localStorage.getItem('token');
 
     const fetchProducts = async () => {
-        const res = await axios.get('http://backendassignment-yvte.onrender.com/api/products');
+        const res = await axios.get('https://backendassignment-yvte.onrender.com/api/products');
         setProducts(res.data.products);
     };
 

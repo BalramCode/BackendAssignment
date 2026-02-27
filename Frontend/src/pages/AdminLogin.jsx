@@ -10,7 +10,7 @@ const AdminLogin = () => {
     const handleAdminLogin = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post('http://backendassignment-yvte.onrender.com/api/auth/login', { email, password });
+            const res = await axios.post('https://backendassignment-yvte.onrender.com/api/auth/login', { email, password });
 
             // Verification: Check if the logged-in user actually has the admin role in DB
             if (res.data.user.role !== 'admin') {

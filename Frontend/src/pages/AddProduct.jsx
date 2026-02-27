@@ -15,7 +15,7 @@ const AddProduct = () => {
     const token = localStorage.getItem('token');
     
     try {
-      await axios.post('http://backendassignment-yvte.onrender.com/api/products', formData, {
+      await axios.post('https://backendassignment-yvte.onrender.com/api/products', formData, {
         headers: { Authorization: `Bearer ${token}` }
       });
       alert("🚀 Product launched successfully!");

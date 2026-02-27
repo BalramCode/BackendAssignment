@@ -14,7 +14,7 @@ const EditProduct = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const res = await axios.get(`http://backendassignment-yvte.onrender.com/api/products/${id}`);
+        const res = await axios.get(`https://backendassignment-yvte.onrender.com/api/products/${id}`);
         const p = res.data.product;
         setFormData({
           name: p.name,
@@ -36,7 +36,7 @@ const EditProduct = () => {
     const token = localStorage.getItem('token');
     
     try {
-      await axios.put(`http://backendassignment-yvte.onrender.com/api/products/${id}`, formData, {
+      await axios.put(`https://backendassignment-yvte.onrender.com/api/products/${id}`, formData, {
         headers: { Authorization: `Bearer ${token}` }
       });
       alert("✅ Product updated successfully!");

@@ -7,7 +7,7 @@ const ProductDetails = () => {
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
-    axios.get(`http://backendassignment-yvte.onrender.com/api/products/${id}`)
+    axios.get(`https://backendassignment-yvte.onrender.com/api/products/${id}`)
       .then(res => setProduct(res.data.product));
   }, [id]);
 
@@ -15,7 +15,7 @@ const ProductDetails = () => {
     const token = localStorage.getItem('token');
     if (!token) return alert("Please login to order");
     try {
-      await axios.post('http://backendassignment-yvte.onrender.com/api/orders', 
+      await axios.post('https://backendassignment-yvte.onrender.com/api/orders', 
         { orderItems: [{ product: product._id, quantity: 1 }] },
         { headers: { Authorization: `Bearer ${token}` } }
       );
