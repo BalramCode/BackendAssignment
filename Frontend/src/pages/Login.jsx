@@ -10,7 +10,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://backendassignment-yvte.onrender.com/api/auth/login', { email, password });
+      const res = await axios.post('https://backendassignmenttt.onrender.com/api/auth/login', { email, password });
       
       localStorage.setItem('token', res.data.token);
       localStorage.setItem('role', res.data.user.role);

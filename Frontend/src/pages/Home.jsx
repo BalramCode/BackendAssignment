@@ -9,7 +9,7 @@ const Home = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await axios.get('https://backendassignment-yvte.onrender.com/api/products');
+        const res = await axios.get('https://backendassignmenttt.onrender.com/api/products');
         setProducts(res.data.products);
         setLoading(false);
       } catch (err) {
