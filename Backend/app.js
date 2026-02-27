@@ -9,7 +9,7 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  origin: 'https://your-frontend-link.onrender.com', // Replace with your ACTUAL frontend link
+  origin: 'https://backendassignment-yvte.onrender.com/', // Replace with your ACTUAL frontend link
   credentials: true
 }));
 app.use(express.json());
