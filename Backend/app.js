@@ -9,8 +9,10 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  origin: 'https://backendassignment-yvte.onrender.com/', // Replace with your ACTUAL frontend link
-  credentials: true
+  origin: 'https://backendassignment-yvte.onrender.com', // No trailing slash!
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
